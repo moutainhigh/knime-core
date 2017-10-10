@@ -59,6 +59,7 @@ import org.knime.core.node.port.pmml.preproc.DerivedFieldMapper;
 /**
  *
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class PMMLMissingValueReplacementTranslator implements PMMLTranslator {
 

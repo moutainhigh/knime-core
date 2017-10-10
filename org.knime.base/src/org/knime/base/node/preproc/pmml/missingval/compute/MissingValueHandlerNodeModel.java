@@ -27,6 +27,7 @@ import org.knime.core.node.port.pmml.PMMLPortObjectSpecCreator;
  *
  *
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class MissingValueHandlerNodeModel extends NodeModel {
 

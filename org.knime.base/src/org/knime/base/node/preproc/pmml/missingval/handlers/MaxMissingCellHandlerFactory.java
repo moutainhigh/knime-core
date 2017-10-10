@@ -59,6 +59,7 @@ import org.knime.core.data.date.DateAndTimeValue;
 /**
  * Creates a handler that replaces missing values with the column's maximum value.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class MaxMissingCellHandlerFactory extends MissingCellHandlerFactory {
 

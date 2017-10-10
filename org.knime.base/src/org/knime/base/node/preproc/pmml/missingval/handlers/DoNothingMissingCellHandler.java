@@ -62,6 +62,7 @@ import org.knime.core.node.NodeSettingsWO;
 /**
  * Does not replace missing values.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class DoNothingMissingCellHandler extends DefaultMissingCellHandler {
 

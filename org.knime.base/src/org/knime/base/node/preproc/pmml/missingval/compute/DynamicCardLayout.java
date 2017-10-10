@@ -57,6 +57,7 @@ import java.awt.Insets;
 /**
  * Card layout that always has the size of the visible component as preferred layout size.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class DynamicCardLayout extends CardLayout {
 

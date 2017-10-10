@@ -54,6 +54,7 @@ import org.knime.core.data.DataRow;
 /**
  * A window over a single column. The size is equal to lookahead + lookbehind + 1.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class DataColumnWindow {
 

@@ -65,6 +65,7 @@ import org.knime.core.node.defaultnodesettings.SettingsModelInteger;
 /**
  * Replaces missing values with a fixed integer.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class FixedIntegerValueMissingCellHandler extends DefaultMissingCellHandler {
 

@@ -54,6 +54,7 @@ import org.knime.core.node.defaultnodesettings.DialogComponentNumber;
 /**
  * A panel that has a field for entering a double value.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class FixedDoubleValuePanel extends DefaultMissingValueHandlerPanel {
 

@@ -78,6 +78,7 @@ import org.knime.core.node.port.pmml.preproc.DerivedFieldMapper;
  * DataTable implementation that provides an iterator that fills missing cells
  * on-the-fly using MissingCellHandlers as configured in a MVSettings object.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class MissingCellReplacingDataTable implements DataTable {
 

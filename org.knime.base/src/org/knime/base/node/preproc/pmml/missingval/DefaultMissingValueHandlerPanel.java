@@ -65,6 +65,7 @@ import org.knime.core.node.port.PortObjectSpec;
 /**
  * Default panel for a missing value handler's settings to be used with DialogComponents.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class DefaultMissingValueHandlerPanel extends MissingValueHandlerPanel {
 

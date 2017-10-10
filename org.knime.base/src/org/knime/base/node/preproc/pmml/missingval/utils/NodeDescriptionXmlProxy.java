@@ -55,7 +55,7 @@ import org.w3c.dom.Element;
  * Delegates all method to the delegate object but the {@link #getXMLDescription()} one.
  *
  * @author Marcel Hanser, Alexander Fillbrunn
- * @since 2.12
+ * @since 3.5
  */
 public final class NodeDescriptionXmlProxy extends NodeDescription {
     private NodeDescription m_delegate;

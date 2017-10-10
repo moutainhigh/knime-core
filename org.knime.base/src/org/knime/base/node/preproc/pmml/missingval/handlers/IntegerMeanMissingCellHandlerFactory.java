@@ -58,6 +58,7 @@ import org.knime.core.data.DoubleValue;
 /**
  * Creates a handler that replaces missing values with the column's rounded mean.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class IntegerMeanMissingCellHandlerFactory extends MissingCellHandlerFactory {
 

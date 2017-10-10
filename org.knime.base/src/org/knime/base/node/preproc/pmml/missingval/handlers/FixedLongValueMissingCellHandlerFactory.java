@@ -58,6 +58,7 @@ import org.knime.core.data.def.LongCell;
 /**
  * Creates a handler that replaces missing values with a fixed integer.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class FixedLongValueMissingCellHandlerFactory extends MissingCellHandlerFactory {
 

@@ -58,6 +58,7 @@ import org.knime.core.data.DoubleValue;
 /**
  * Creates a handler that replaces missing values with the mean.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class DoubleMeanMissingCellHandlerFactory extends MissingCellHandlerFactory {
 

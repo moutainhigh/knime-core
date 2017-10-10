@@ -59,6 +59,7 @@ import org.knime.core.node.port.PortObjectSpec;
 /**
  *
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public abstract class MissingValueHandlerPanel extends JPanel {
 

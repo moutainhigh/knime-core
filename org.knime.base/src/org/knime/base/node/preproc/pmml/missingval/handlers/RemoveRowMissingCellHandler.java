@@ -61,6 +61,7 @@ import org.knime.core.node.NodeSettingsWO;
 /**
  * Removes a row if it has a missing value in the column this handler is configured for.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class RemoveRowMissingCellHandler extends DefaultMissingCellHandler {
 

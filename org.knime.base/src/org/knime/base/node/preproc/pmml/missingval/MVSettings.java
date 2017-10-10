@@ -54,7 +54,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
 
-import org.knime.base.node.preproc.pmml.missingval.handlers.DoNothingMissingCellHandlerFactory;
 import org.knime.core.data.DataColumnSpec;
 import org.knime.core.data.DataTableSpec;
 import org.knime.core.data.DataType;
@@ -66,6 +65,7 @@ import org.knime.core.node.NodeSettingsWO;
 /**
  * Holds all information necessary to initialize the missing value handlers for all columns of a table.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class MVSettings {
 
@@ -98,7 +98,7 @@ public class MVSettings {
             types.add(spec.getColumnSpec(i).getType());
         }
         for (DataType t : types) {
-            setSettingsForDataType(t, new MVIndividualSettings(DoNothingMissingCellHandlerFactory.getInstance()));
+            setSettingsForDataType(t, new MVIndividualSettings(getHandlerFactoryManager()));
         }
     }
 
@@ -186,7 +186,7 @@ public class MVSettings {
         m_generalSettings.clear();
         NodeSettingsRO colSettings = settings.getNodeSettings(COL_SETTINGS_CFG);
         for (String key : colSettings.keySet()) {
-            MVColumnSettings colSet = new MVColumnSettings();
+            MVColumnSettings colSet = new MVColumnSettings(getHandlerFactoryManager());
             String w = colSet.loadSettings(colSettings.getNodeSettings(key), repair);
             if (w != null) {
                 if (warning.length() > 0) {
@@ -199,7 +199,7 @@ public class MVSettings {
 
         NodeSettingsRO dtSettings = settings.getNodeSettings(DT_SETTINGS_CFG);
         for (String key : dtSettings.keySet()) {
-            MVIndividualSettings dtSetting = new MVIndividualSettings();
+            MVIndividualSettings dtSetting = new MVIndividualSettings(getHandlerFactoryManager());
             String w = dtSetting.loadSettings(dtSettings.getNodeSettings(key), repair);
             if (w != null) {
                 if (warning.length() > 0) {
@@ -224,8 +224,7 @@ public class MVSettings {
         for (int i = 0; i < dataTableSpec.getNumColumns(); i++) {
             DataType type = dataTableSpec.getColumnSpec(i).getType();
             if (!m_generalSettings.containsKey(getTypeKey(type))) {
-                setSettingsForDataType(type, new MVIndividualSettings(
-                                                    DoNothingMissingCellHandlerFactory.getInstance()));
+                setSettingsForDataType(type, new MVIndividualSettings(getHandlerFactoryManager()));
             }
         }
     }
@@ -248,5 +247,10 @@ public class MVSettings {
             }
             return sb.toString();
         }
+    }
+
+    /** @return manager keeping the missing value handler factories */
+    protected MissingCellHandlerFactoryManager getHandlerFactoryManager() {
+        return MissingCellHandlerFactoryManager.getInstance();
     }
 }

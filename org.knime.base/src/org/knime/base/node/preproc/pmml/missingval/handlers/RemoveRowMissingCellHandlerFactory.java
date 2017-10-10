@@ -57,6 +57,7 @@ import org.knime.core.data.DataType;
 /**
  * Creates a handler that removes rows with a missing value in the column it is configured for.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class RemoveRowMissingCellHandlerFactory extends MissingCellHandlerFactory {
 

@@ -62,6 +62,7 @@ import org.knime.core.node.NodeSettingsWO;
 /**
  * Replaces missing values in a column with the smallest value in this column.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class MinMissingCellHandler extends DefaultMissingCellHandler {
 

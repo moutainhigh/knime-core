@@ -54,6 +54,7 @@ import org.knime.core.node.defaultnodesettings.DialogComponentNumber;
 /**
  * A panel where the user can select lookbehind and lookahead for the DoubleMovingAverageMissingCellHandler.
  * @author Alexander Fillbrunn
+ * @since 3.5
  */
 public class DoubleMovingAveragePanel extends DefaultMissingValueHandlerPanel {
 
